@@ -23,7 +23,6 @@ export const registerUser = async (req, res) => {
         id: user._id,
         username: user.username,
         email: user.email,
-        password: user.password,
       },
     });
   } catch (err) {
