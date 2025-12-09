@@ -4,9 +4,11 @@ import documentRouter from "./routes/documents.route.js";
 import cors from "cors";
 
 const app = express();
+const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173";
+
 app.use(
   cors({
-    origin: process.env.CLIENT_URL,
+    origin: CLIENT_URL,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
